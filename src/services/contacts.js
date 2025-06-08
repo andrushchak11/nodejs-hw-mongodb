@@ -8,11 +8,12 @@ export const getAllContacts = async ({
   sortOrder = SORT_ORDER.ACS,
   sortBy = '_id',
   filter = {},
+  userId,
 }) => {
   const limit = perPage;
   const skip = (page - 1) * perPage;
 
-  const contactsQuery = ContactsCollection.find();
+  const contactsQuery = ContactsCollection.find({ userId });
 
   if (filter.contactType) {
     contactsQuery.where('contactType').equals(filter.contactType);
@@ -53,9 +54,10 @@ export const updateContact = async (contactId, updateData, userId) => {
     updateData,
     {
       new: true,
-      runValidators: true,
     },
   );
+
+  console.log('Found and updated:', updatedContact);
 
   return updatedContact;
 };
