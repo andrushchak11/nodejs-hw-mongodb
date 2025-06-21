@@ -31,7 +31,9 @@ responses:
               type: string
               example: Successfully get contact
             data:
-              $ref: ../../../components/schemas/contact.yaml
+              type: array
+              items:
+                $ref: ../../../components/schemas/contact.yaml
   '401':
     $ref: '../../../components/responses/401.yaml'
   '404':

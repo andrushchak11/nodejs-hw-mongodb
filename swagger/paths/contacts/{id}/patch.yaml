@@ -62,7 +62,9 @@ responses:
               type: string
               example: Contact update
             data:
-              $ref: ../../../components/schemas/contact.yaml
+              type: array
+              items:
+                $ref: ../../../components/schemas/contact.yaml
 
   '401':
     $ref: ../../../components/responses/401.yaml
