@@ -130,7 +130,10 @@
                       "example": "Successfully found contacts!"
                     },
                     "data": {
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }
@@ -274,7 +277,10 @@
                       "example": "Successfully get contact"
                     },
                     "data": {
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }
@@ -383,7 +389,10 @@
                       "example": "Contact update"
                     },
                     "data": {
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }
