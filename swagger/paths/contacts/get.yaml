@@ -92,6 +92,25 @@ responses:
                   type: array
                   items:
                     $ref: ../../components/schemas/contact.yaml
+                page:
+                  type: number
+                  example: 1
+                perPage:
+                  type: number
+                  example: 4
+                totalItems:
+                  type: number
+                  example: 1
+                totalPages:
+                  type: number
+                  example: 1
+                hasNextPage:
+                  type: boolean
+                  example: false
+                hasPreviousPage:
+                  type: boolean
+                  example: false
+
   '401':
     $ref: ../../components/responses/401.yaml
   '404':

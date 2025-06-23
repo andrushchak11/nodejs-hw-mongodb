@@ -37,3 +37,11 @@ properties:
     description: "Contact's owner"
     type: string
     example: '65e4decdd286b30065d54af9'
+  # createdAt:
+  #   type: string
+  #   format: date-time
+  #   example: '2025-06-09T19:49:37.155Z'
+  # updatedAt:
+  #   type: string
+  #   format: date-time
+  #   example: '2025-06-09T19:49:37.155Z'

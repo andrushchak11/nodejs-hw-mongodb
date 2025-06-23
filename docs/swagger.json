@@ -110,7 +110,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Get all contacts",
+            "description": "Successfully found contacts!",
             "content": {
               "application/json": {
                 "schema": {
@@ -130,9 +130,47 @@
                       "example": "Successfully found contacts!"
                     },
                     "data": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/contact"
+                      "type": "object",
+                      "required": [
+                        "data",
+                        "page",
+                        "perPage",
+                        "totalItems",
+                        "totalPages",
+                        "hasNextPage",
+                        "hasPreviousPage"
+                      ],
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/contact"
+                          }
+                        },
+                        "page": {
+                          "type": "number",
+                          "example": 2
+                        },
+                        "perPage": {
+                          "type": "number",
+                          "example": 4
+                        },
+                        "totalItems": {
+                          "type": "number",
+                          "example": 4
+                        },
+                        "totalPages": {
+                          "type": "number",
+                          "example": 4
+                        },
+                        "hasNextPage": {
+                          "type": "boolean",
+                          "example": false
+                        },
+                        "hasPreviousPage": {
+                          "type": "boolean",
+                          "example": true
+                        }
                       }
                     }
                   }
@@ -257,7 +295,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successfully found contacts!",
+            "description": "Successfully found contact!",
             "content": {
               "application/json": {
                 "schema": {
@@ -274,7 +312,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Successfully found contacts!"
+                      "example": "Successfully found contact!"
                     },
                     "data": {
                       "type": "object",
