@@ -61,7 +61,7 @@ parameters:
 
 responses:
   '200':
-    description: Get all contacts
+    description: Successfully found contacts!
     content:
       application/json:
         schema:
@@ -78,9 +78,20 @@ responses:
               type: string
               example: Successfully found contacts!
             data:
-              type: array
-              items:
-                $ref: ../../components/schemas/contact.yaml
+              type: object
+              required:
+                - data
+                - page
+                - perPage
+                - totalItems
+                - totalPages
+                - hasNextPage
+                - hasPreviousPage
+              properties:
+                data:
+                  type: array
+                  items:
+                    $ref: ../../components/schemas/contact.yaml
   '401':
     $ref: ../../components/responses/401.yaml
   '404':
